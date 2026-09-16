@@ -1,1 +1,48 @@
-
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sotavento Pupuya — Refugio frente al Pacífico</title>
+  <meta name="description" content="Sotavento Pupuya: una pausa frente al Pacífico, entre mar, viento y paisaje costero." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d2d34'/%3E%3Cpath d='M10 39c9-9 17 7 27-2 7-6 11-5 17-1' fill='none' stroke='%23e9ddc3' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='42' cy='20' r='6' fill='%23dc7653'/%3E%3C/svg%3E" />
+  <style>
+    :root{--ink:#102f35;--paper:#f4efe5;--sand:#ded0b6;--coral:#cf694d;--foam:#fbf8f2;--line:rgba(16,47,53,.18)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.6}a{color:inherit;text-decoration:none}img{display:block;width:100%}
+    .nav{position:absolute;z-index:3;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:24px 5vw;color:white}.brand{font-family:'Italiana',serif;font-size:1.45rem;letter-spacing:.08em}.navlinks{display:flex;gap:28px;font-size:.84rem;text-transform:uppercase;letter-spacing:.11em}.navlinks a{opacity:.8}.navlinks a:hover{opacity:1}
+    .hero{min-height:100svh;position:relative;display:grid;align-items:end;padding:16vh 5vw 7vh;color:white;background:linear-gradient(180deg,rgba(4,20,24,.18),rgba(4,20,24,.68)),url('https://storage.googleapis.com/chile-travel-newsite-static-content/2021/07/Matanzas_3.jpg') center/cover}.hero-inner{max-width:980px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:600}.hero h1{font-family:'Italiana',serif;font-weight:400;font-size:clamp(4rem,10vw,9.5rem);line-height:.82;letter-spacing:-.025em;margin:.25em 0 .18em}.hero p{max-width:580px;font-size:clamp(1.05rem,2vw,1.35rem);margin:0 0 2rem;color:rgba(255,255,255,.86)}.button{display:inline-flex;align-items:center;gap:18px;border:1px solid rgba(255,255,255,.6);padding:13px 18px;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem}.button span{font-size:1.15rem;transition:transform .2s}.button:hover span{transform:translateY(3px)}
+    main{overflow:hidden}.intro{display:grid;grid-template-columns:1fr 2fr;gap:8vw;padding:11vw 5vw 12vw;border-bottom:1px solid var(--line)}.section-num{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}.intro h2,.location h2,.closing h2{font-family:'Italiana',serif;font-size:clamp(2.7rem,6vw,6rem);font-weight:400;line-height:1.04;margin:0}.intro-copy{max-width:780px}.intro-copy p{font-size:clamp(1.15rem,2.1vw,1.7rem);line-height:1.48;margin:2rem 0 0;color:#27464b}
+    .manifesto{background:var(--ink);color:var(--foam);padding:10vw 5vw;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}.manifesto article{padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.25)}.manifesto h3{font-family:'Italiana',serif;font-size:2.3rem;font-weight:400;margin:.2rem 0 1rem}.manifesto p{color:rgba(255,255,255,.68);max-width:32ch}.stamp{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--coral);color:#f5b49e;font-size:.8rem}
+    .location{display:grid;grid-template-columns:1.05fr .95fr;min-height:720px}.photo{background:linear-gradient(0deg,rgba(10,38,43,.12),rgba(10,38,43,.12)),url('https://paulasalgado.cl/storage/posts/01KRBX4A4JKG8JQ58RRZQQ5HH9.jpg') center/cover;min-height:520px}.location-copy{padding:8vw 6vw;display:flex;flex-direction:column;justify-content:center}.location-copy p{max-width:44ch;margin:2rem 0;color:#35545a}.coordinates{display:flex;justify-content:space-between;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.77rem;text-transform:uppercase;letter-spacing:.1em}
+    .closing{padding:12vw 5vw;background:var(--coral);color:#fff4e7;display:grid;grid-template-columns:1fr 2fr;gap:8vw}.closing p{max-width:48ch;font-size:1.12rem}.closing .button{margin-top:1.2rem}
+    footer{background:#081f24;color:rgba(255,255,255,.58);padding:35px 5vw;display:flex;justify-content:space-between;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+    .reveal{opacity:0;transform:translateY(24px);transition:.8s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:760px){.navlinks{display:none}.hero{padding-bottom:9vh}.hero h1{font-size:clamp(4rem,21vw,7rem)}.intro,.closing{grid-template-columns:1fr;gap:2.5rem;padding:20vw 6vw}.manifesto{grid-template-columns:1fr;padding:18vw 6vw;gap:3rem}.location{grid-template-columns:1fr}.photo{min-height:62vh;order:1}.location-copy{padding:18vw 6vw}.coordinates{gap:1rem;flex-direction:column}footer{flex-direction:column;gap:.8rem}.brand{font-size:1.25rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+  </style>
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav" aria-label="Navegación principal"><a class="brand" href="#inicio">SOTAVENTO</a><div class="navlinks"><a href="#esencia">Esencia</a><a href="#lugar">El lugar</a><a href="#contacto">Contacto</a></div></nav>
+    <div class="hero-inner"><div class="eyebrow">Pupuya · Costa de Chile</div><h1>Donde baja<br>el viento.</h1><p>Un refugio frente al Pacífico para volver al ritmo simple del mar.</p><a class="button" href="#esencia">Descubrir Sotavento <span>↓</span></a></div>
+  </header>
+  <main>
+    <section class="intro" id="esencia"><div class="section-num reveal">01 / La esencia</div><div class="intro-copy reveal"><h2>El lujo de estar<br>justo aquí.</h2><p>Sotavento nace de una idea sencilla: abrir espacio para que el paisaje haga lo suyo. Días largos, sal en la piel y noches al ritmo de la costa.</p></div></section>
+    <section class="manifesto" aria-label="Experiencia Sotavento">
+      <article class="reveal"><div class="stamp">01</div><h3>Mar</h3><p>El Pacífico marca las horas. La playa, las olas y el horizonte están siempre cerca.</p></article>
+      <article class="reveal"><div class="stamp">02</div><h3>Calma</h3><p>Espacios pensados para bajar la velocidad, conversar y descansar sin apuro.</p></article>
+      <article class="reveal"><div class="stamp">03</div><h3>Territorio</h3><p>Una forma de habitar conectada con Pupuya, su viento y su identidad costera.</p></article>
+    </section>
+    <section class="location" id="lugar"><div class="photo" role="img" aria-label="Costa de Pupuya y Matanzas"></div><div class="location-copy reveal"><div class="section-num">02 / El lugar</div><h2>Pupuya,<br>sin prisa.</h2><p>En la costa de la Región de O’Higgins, entre acantilados, rompientes y caminos rurales. Un paisaje vivo que invita a mirar más lejos y hacer menos.</p><div class="coordinates"><span>Navidad, Chile</span><span>Océano Pacífico</span></div></div></section>
+    <section class="closing" id="contacto"><div class="section-num reveal">03 / Próximamente</div><div class="reveal"><h2>Tu próxima pausa<br>empieza acá.</h2><p>Estamos preparando cada detalle de Sotavento Pupuya. Muy pronto compartiremos disponibilidad, experiencias y formas de reservar.</p><a class="button" href="#inicio">Volver al inicio <span>↑</span></a></div></section>
+  </main>
+  <footer><span>© 2026 Sotavento Pupuya</span><span>Costa de Chile</span></footer>
+  <script>
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
